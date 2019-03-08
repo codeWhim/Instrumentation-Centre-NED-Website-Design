@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <title>Instrumentation Centre</title>
+
+    <link rel="stylesheet" href="css/jquery.mThumbnailScroller.css">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+
+    <style>
+    .content{
+      overflow: hidden;
+      height: 114px;
+      position: relative;
+      padding: 10px;
+      margin: 10px auto;
+      width: 85%;
+    }
+    .content li{ margin: 0 4px; }
+    .content li a{
+      display: block;
+      border: 7px solid rgba(255,255,255,.1);
+    }
+    .content ul{ 
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-out;
+      -moz-transition: opacity 1s ease-out;
+      -ms-transition: opacity 1s ease-out;
+      -o-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out;
+    }
+    .content.scroller-ready ul{ opacity: 1; }
+    /* CSS loading spinner (optional) */
+    @keyframes spinner{ to {transform: rotate(360deg);} }
+    @-webkit-keyframes spinner{ to {-webkit-transform: rotate(360deg);} }
+    .spinner{
+        min-width: 24px;
+        min-height: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+      width: 100%;
+    }
+    .spinner:before{
+        content: 'Loading…';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+        margin-left: -16px;
+    }
+    .spinner:not(:required):before{
+        content: '';
+        border-radius: 50%;
+        border-top: 5px solid #f18e34;
+        border-right: 5px solid transparent;
+        animation: spinner .6s linear infinite;
+        -webkit-animation: spinner .6s linear infinite;
+    }
+    .content.scroller-ready .spinner{ display: none; }
+  </style>
+
+
+  <link rel="stylesheet" href="css/sam.css">
+
+  </head>
+  <body>
+
+
+
+<div id="loader-wrapper">
+  <div id="loader"><div class="nedLogo2"></div></div>
+
+  <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+</div>
+
+
+
+
+    
+<div class="headerLogo"></div>
+    <div class="navigationBar text-center">
+
+      <header>
+<nav id='cssmenu'>
+<div id="head-mobile"></div>
+<div class="button"></div>
+<ul>
+<li class='active'><a href='index.html'>HOME</a></li>
+
+<li><a href='instrumentation-centre.html'>ABOUT US</a>
+   <ul>
+      <li><a href='instrumentation-centre.html'>Instrumentation Centre</a></li>
+      <li><a target="_blank" href='downloads/IC-brochure-Jan-2018.pdf'>Brochure</a></li>
+      <!--<li><a href='history.html'>History</a></li>-->
+      
+      <!--<li><a href='team.html'>IC Team</a></li>-->
+   </ul>
+</li>
+
+<li><a href='engineering-services.html'>ENGINEERING SERVICES</a>
+   <ul>
+      <li><a href='calibration-verification.html'>Calibration & Verification</a>
+         <!--<ul>
+            <li><a href='electro-technical.html'>Electro Technical</a></li>
+            <li><a href='pressure.html'>Pressure</a></li>
+            <li><a href='temperature.html'>Temperature</a></li>
+            <li><a href='weighing-scale.html'>Weighing Scale</a></li>
+         </ul>-->
+      </li>
+      <li><a href='testing.html'>Testing</a>
+         <!--<ul>
+            <li><a href='thermal-imaging-service.html'>Thermal Imaging Service</a></li>
+            <li><a href='electrical.html'>Electrical</a></li>
+            <li><a href='power-quality.html'>Power Quality Testing</a></li>
+            <li><a href='instruments-transmittors.html'>Instruments & Transmitters Testing</a></li>
+            <li><a href='sound-vibration.html'>Sound and Vibration</a></li>
+            <li><a href='lux-measurements.html'>LUX measurements</a></li>
+            <li><a href='ph-tds.html'>pH & TDS</a></li>
+         </ul>-->
+      </li>
+      <li><a href='engineering-consultancy.html'>Engineering Consultancy</a>
+         <!--<ul>
+            <li><a href='power-quality-analysis.html'>Power Quality Analysis</a></li>
+            <li><a href='electricity-optimization.html'>Energy Optimization Solutions</a></li>
+            <li><a href='electrical-network.html'>Electrical Network Planning & Design</a></li>
+            <li><a href='energy-management.html'>Energy Management</a></li>
+            <li><a href='renewable-energy.html'>Renewable Energy</a></li>
+         </ul>-->
+      </li>
+      <li><a href='repair-maintenance.html'>Repair & Maintenance</a>
+         <!--<ul>
+            <li><a href='instrument-repair.html'>Instrument Repair & Maintenance</a></li>
+            <li><a href='pcb.html'>PCB Boards & Electronic Circuits</a></li>
+            <li><a href='maintenance-clinic.html'>Maintenance Clinic Program</a></li>
+         </ul>-->
+      </li><!--
+      <li><a href='optical-fiber.html'>Optical Fiber Splicing</a></li>
+      <li><a href='pcb-design.html'>PCB Design & Development</a></li>-->
+      <li><a href='facilities.html'>Lab Facilities</a></li>
+   </ul>
+</li>
+
+<li><a href='training.html'>TRAININGS</a>
+   <ul>
+      <li><a href='training-list.html'>Training List</a></li>
+      <li><a href='training-plan.html'>Training Plan</a></li>
+      <!--<li><a href='completed-programs.html'>Completed Programs</a></li>
+      <li><a href='registration.html'>Registration</a></li>-->
+   </ul>
+</li>
+<li><a href='industries.html'>CLIENTS</a></li>
+<!--
+<li><a href='research-development.html'>RESEARCH & DEVELOPMENT</a>
+   <ul>
+      <li><a href='instruments-developed.html'>Instruments Developed</a></li>
+      <li><a href='industries.html'>Industries</a></li>
+      <li><a href='student-projects.html'>Student Projects</a></li>
+   </ul>
+</li>
+-->
+<li><a href='products-solutions.html'>PRODUCTS & SOLUTIONS</a>
+   <!--<ul>
+      <li><a href='daq-card.html'>DAQ Card</a></li>
+      <li><a href='temperature-logger.html'>Temperature Logger</a></li>
+   </ul>-->
+</li>
+<li><a href='contact-us.html'>CONTACT US</a></li>
+
+
+</ul>
+</nav>
+</header>
+
+
+    </div>
+
+
+  <div class="container">
+
+    <div class="contentArea">
+
+
+
+      <h1>Technical Training Solutions</h1>
+
+
+      <div id="exampleAccordion" data-children=".item">
+
+      <!--<footer class="blockquote-footer text-center"><cite title="Source Title">BUILDING SKILLFUL PAKISTAN </cite></footer>-->
+
+      <div class="contentPara">
+
+        <div class="row">
+          <div class="col-md-4 boxYellow">
+
+
+      <dt class="text-center" style="font-size: 1.4em; font-family: Oswald; text-transform: uppercase;">Trainings we Offer</dt><br />
+
+      <dt>Fundamental Trainings</dt>
+
+      <ul>
+        
+        <li><a href="training-engineeringFundamentals.html" aria-expanded="false">Engineering Fundamentals used in Industrial Plants</a></li>
+        <li><a href="training-measureAccurately.html" aria-expanded="false">How to measure accurately</a></li>
+        <li><a href="training-industrialSafety.html" aria-expanded="false">Industrial Safety & Health</a></li>
+        <!--<li>Troubleshooting Skills</li>
+        <li>Handling Industrial Tools</li>
+        <li>First line maintenance training</li>-->
+      </ul>
+
+<!--
+      <dt>Callibration Principles & Process</dt>
+
+      <ul>
+        <li>Objectives</li>
+        <li>The Importance of Calibration</li>
+        <li>Measurement Standards</li>
+        <li>Traceability</li>
+        <li>Overview of ISO17025 Calibration Standard</li>
+        <li>Technical Requirements as per ISO 17025</li>
+        <li>Introduction to Measurement Uncertainty</li>
+        <li>Understanding and using instrument specifications.</li>
+        <li>Factors affecting measurement uncertainty</li>
+        <li>Creating a Basic Uncertainty Budget</li>
+        <li>Method Validation</li>
+        <li>The Calibration Process</li>
+        <li>Calibration Records</li>
+        <li>The Calibration Report</li>
+      </ul>
+    -->
+
+      <dt>Instrument Measure & Control Training</dt>
+
+      <ul>
+        <li><a href="training-callibrationPrinciples.html">Callibration Principles & Process</a></li>
+        <!--<li>Measurement System Principles Introduction</li>
+        <li>Fundamentals of Industrial Process Measurements</li></li>
+        <li>Instrument Calibration Lab based</li>
+        <li>Measurement Uncertainty & Uncertainty Budgets </li>
+        <li>Statistical/ Quality Assurance Tools for Calibration </li>
+        <li>Test Instruments & Devices</li>
+        <li>Hazardous Area Classification & Installation</li></li>-->
+        <li><a href="training-labviewDataMonitoring.html" aria-expanded="false">Real Time Data Monitoring & Analysis using LABVIEW</a></li>
+        <!--
+        <li><a href="training-arduinoWebData.html" aria-expanded="false">Web based data monitoring using Arduino</a></li>
+        <li><a href="training-ownMonitoringDevices.html" aria-expanded="false">Develop your own Data monitoring device</a></li>
+        <li>Modern Wi-Fi Solutions to Instrumentation and Control</li>
+        <li>Industrial Networking & Controls</li>-->
+        <li><a href="training-pneumatics.html" aria-expanded="false">Introduction to Pneumatics including fault finding and diagnostics</a></li>
+        <!--<li>Introduction to automated Industrial Control Systems, </li>-->
+        <li><a href="training-plcTraining.html" aria-expanded="false">Hands-On PLC Training Basic</a></li>
+      </ul>
+    
+
+      <dt>Electrical Training</dt>
+
+      <ul>
+        <!--<li><a href="training-basicElectronics.html" aria-expanded="false">Introduction to Basic Electronics</a></li>
+        <li><a href="training-basicElectrical.html" aria-expanded="false">Introduction to Basic Electrical</a></li>
+        <!--<li>Practical Industrial Electrical training course for engineers</li>-->
+        <li><a href="training-electricalMeasureInstruments.html" aria-expanded="false">Electrical Measure Instruments</a></li>
+        <li><a href="training-electricalControlEquipments.html" aria-expanded="false">Electrical Control Equipments</a></li>
+        <li><a href="training-electricalSafety.html" aria-expanded="false">Electrical Safety & Protection Systems</a></li>
+        <li><a href="training-electricalFault.html" aria-expanded="false">Electrical Fault Finding & Troubleshooting Techniques</a></li>
+        <li><a href="training-basicElectronicFault.html" aria-expanded="false">Basic Electronic Fault Finding & Soldering Techniques</a></li>
+        <!--<li><a href="training-repairingInstruments.html" aria-expanded="false">Repairing of Instruments & PCB Boards.</a></li>-->
+        <li><a href="training-electricalTesting.html" aria-expanded="false">Electrical Testing Practical Approach</a></li>
+        <li><a href="training-motorStartersVFDs.html" aria-expanded="false">Motor Starters & VFDs </a></li>
+        <!--<li>Electrical Tools & Test Equipments</li>
+        <li>Electrical Distribution Components</li>-->
+      </ul>
+
+      <dt>Electrical Power & Energy Training</dt>
+
+      <ul>
+        <li><a href="training-electricalPowerEnergy.html" aria-expanded="false">Introduction to Electrical Power & Energy</a></li>
+        <li><a href="training-powerFactorImprovement.html" aria-expanded="false">Power Factor Improvement Plant</a></li>
+        <li><a href="training-electricalEnergyAssessment.html" aria-expanded="false">Electric Energy Assessment & Billing Optimization for Industries</a></li>
+        <!--<li>Metering, Billing & Loss Reduction Best Practices</li>
+        <li>Energy Utilization & Load Management</li>
+        <li>Industrial Energy Assessment</li>-->
+      </ul>
+
+    </div>
+
+    <div class="col-md-8">
+
+
+
+      <div class="card card-body">
+        
+        <dt>Training Solutions</dt>
+      <footer class="blockquote-footer"><cite>To provide leading continuing education and training courses to industry and aspiring students in the domain of Electrical, Electronic and Instrumentation & Control Engineering.</cite></footer>
+
+      We believe academia can play a vital role in the industrial development. NEDUET has strong roots in industry and producing competent and professional engineers from decades. <br /><br />
+
+      Instrumentation Centre, NEDUET is committed to serve and enhance international competitiveness of Pakistan industry by providing educational, managerial and technical services.<br /><br />
+
+      Instrumentation Centre has been providing the best training solutions to industries and professionals to help them achieve their goals through skilled training programs focusing in the areas of Electrical, Electronics & Instrumentation & Control engineering. However, we also arrange trainings on other topics as per clients’ demand.<br /><br />
+      We understand that similar plants and facilities have different training requirements depending on their systems, equipment and workforce. 
+      Depending on the client’s need, our experienced training consultants are ready to help the organizations to design, execute and measure training programs they need.<br /><br />
+
+      <div id="trainingService">
+        <dt>Training Service</dt>
+        <p>
+        Offering professional development training programs allows employees to perform better and prepares them for positions of greater responsibility. But it can also help employers attract top job candidates, retain their best workers and identify future leaders. Moreover, ongoing professional development is very appealing to many employees today who are looking to keep their skills relevant in a rapidly changing world.
+        </p><p>
+        Investing in training is not only good for your employees – it delivers real, lasting benefits to your business and your bottom line as well.
+        </p>
+      </div>
+
+      <div id="industrialTrainings">
+        <dt>Industrial Trainings</dt>
+        <p>Instrumentation Centre, NEDUET is an engineering skills training  provider with years of experience behind it. Through the IC comprehensive course and instructor evaluation system, a continuous quality assurance process is in place, which ensures IC training staff members are not only technical experts but also highly competent teachers. We provide:
+          <ul>
+            <li>A comprehensive range of highly-focused technical courses, covering multiple areas and industries that fit the needs of your organization.</li>
+            <li>The emphasis is on useful and market based practical skills.</li>
+            <li>A ‘hands-on’ approach to training so that delegates ‘learn by doing’ on modern industrial equipment.</li>
+            <li>Competence-based and Nationally recognized  NEDUET certificates.</li>
+            <li>Convenient delivery of training either Instructor-Led (at our Training Centre or at client premises) or through e-learning ensuring training objectives are achieved.</li>
+            <li>Customized courses can be created to match specific training needs from beginner to advance levels.</li>
+            <li>Comprehensive course notes are provided for all candidates on the courses. </li>
+          </ul>
+        </p>
+      </div>
+
+      <div id="trainingMethod">
+        <dt>Training Method</dt>
+        <p>Many factors are involved in deciding which training method is best suited to meet the required performance objectives. IC provides you the full range of training delivery options best suited as per your requirements.</p>
+        <p>It can be set apart in several ways. Typically, you place it in a text box and then position the box. In addition, you might format the pull quote differently by changing the typeface, style, and size of the font. </p>
+
+        <em>Instructor-Led Training</em>
+        <p>Live instructor format is the most effective and efficient way of learning and it allows your employee to get personalized help from expert instructor. One or two day training provide intensive knowledge and skills that get your employees back to the workplace quickly to apply what they learned from the training. IC also offers to conduct training at your own facility fulfilling the plant’s most critical training needs.</p>
+
+        <em>Interactive Training</em>
+        <p>Online Training reduces training time and helps improve knowledge retention of key subjects. IC offers on demand customizable online courses as per organizational needs.</p>
+
+        <em>Custom Training</em>
+        <p>We create specialized maintenance and operations training programs. We can train your trainers, create custom course content focusing on your equipment, train new employee at your facility, or deliver refresher training to your seasoned employee.</p>
+
+      </div>
+
+      <div id="trainingProgrammeDesign">
+        <dt>Training Programme Design</dt>
+        <p>Our training consultants analyze and identify the specific industrial skills and courses for the organization that covers the highest priority core knowledge and skills requirements.</p>
+        <p>How can a business measure the impact of training on their bottom line? How can a business ensure training supports business goals? How can I ensure training meets the development needs of my people? What analysis tools can help be identify training needs in the business? 
+        </p>
+
+      </div>
+
+      <br /><br />
+      <a class="btn btn-warning" target="_blank" href='downloads/Training-brochure-Jan-2018.pdf'>Training Brochure</a>
+      <br />
+
+      </div>
+
+    
+      
+
+    </div>
+
+  </div>
+
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+
+
+
+  <div class="footerArea">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="footerHeading">Quick Links</h4>
+          <ul>
+            <li><a href="engineering-services.html">Engineering Services</a></li>
+            <li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+            <li><a href="testing-labs.html">Testing Labs</a></li>
+            <li><a href="products-and-services.html">Products & Services</a></li>
+            <li><a href="team.html">The team</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="nedLogo"></div>
+        </div>
+        <div class="col-md-4 ml-auto">
+          <h4 class="footerHeading">Contact Us</h4>
+          <div class="footerAddress">Instrumentation Centre, <br />Electronic Engineering Department, <br />NED University of Engineering & Technology</div>
+          <div class="footerContactDetails">021-99261261-8 Ext. 2265, 2514<br />smic@neduet.edu.pk</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+
+  <script src="js/popper.min.js" ></script>
+  <script src="js/bootstrap.min.js" ></script>
+
+  <!-- Make sure the following jquery is not conflicting with one imported earlier -->
+  <script src="jquery-1.110.0.min.js"></script>
+  
+  <script> 
+  $(function(){
+    $("#navigation").load("navigation.html"); 
+  });
+  </script>
+
+    <!-- plugin script -->
+  <script src="js/jquery.mThumbnailScroller.js"></script>
+  <script src="js/sam.js"></script>
+
+  </body>
+</html>

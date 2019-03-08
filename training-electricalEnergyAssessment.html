@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+
+    <title>Instrumentation Centre</title>
+
+    <link rel="stylesheet" href="css/jquery.mThumbnailScroller.css">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+
+
+    <style>
+    .content{
+      overflow: hidden;
+      height: 114px;
+      position: relative;
+      padding: 10px;
+      margin: 10px auto;
+      width: 85%;
+    }
+    .content li{ margin: 0 4px; }
+    .content li a{
+      display: block;
+      border: 7px solid rgba(255,255,255,.1);
+    }
+    .content ul{ 
+      opacity: 0;
+      -webkit-transition: opacity 1s ease-out;
+      -moz-transition: opacity 1s ease-out;
+      -ms-transition: opacity 1s ease-out;
+      -o-transition: opacity 1s ease-out;
+      transition: opacity 1s ease-out;
+    }
+    .content.scroller-ready ul{ opacity: 1; }
+    /* CSS loading spinner (optional) */
+    @keyframes spinner{ to {transform: rotate(360deg);} }
+    @-webkit-keyframes spinner{ to {-webkit-transform: rotate(360deg);} }
+    .spinner{
+        min-width: 24px;
+        min-height: 24px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+      width: 100%;
+    }
+    .spinner:before{
+        content: 'Loading…';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 32px;
+        height: 32px;
+        margin-top: -16px;
+        margin-left: -16px;
+    }
+    .spinner:not(:required):before{
+        content: '';
+        border-radius: 50%;
+        border-top: 5px solid #f18e34;
+        border-right: 5px solid transparent;
+        animation: spinner .6s linear infinite;
+        -webkit-animation: spinner .6s linear infinite;
+    }
+    .content.scroller-ready .spinner{ display: none; }
+  </style>
+
+
+  <link rel="stylesheet" href="css/sam.css">
+
+  </head>
+  <body>
+
+
+
+<div id="loader-wrapper">
+  <div id="loader"><div class="nedLogo2"></div></div>
+
+  <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+</div>
+
+
+
+
+    
+<div class="headerLogo"></div>
+    <div class="navigationBar text-center">
+
+      <header>
+<nav id='cssmenu'>
+<div id="head-mobile"></div>
+<div class="button"></div>
+<ul>
+<li class='active'><a href='index.html'>HOME</a></li>
+
+<li><a href='instrumentation-centre.html'>ABOUT US</a>
+   <ul>
+      <li><a href='instrumentation-centre.html'>Instrumentation Centre</a></li>
+      <li><a target="_blank" href='downloads/IC-brochure-Jan-2018.pdf'>Brochure</a></li>
+      <!--<li><a href='history.html'>History</a></li>-->
+      
+      <!--<li><a href='team.html'>IC Team</a></li>-->
+   </ul>
+</li>
+
+<li><a href='engineering-services.html'>ENGINEERING SERVICES</a>
+   <ul>
+      <li><a href='calibration-verification.html'>Calibration & Verification</a>
+         <!--<ul>
+            <li><a href='electro-technical.html'>Electro Technical</a></li>
+            <li><a href='pressure.html'>Pressure</a></li>
+            <li><a href='temperature.html'>Temperature</a></li>
+            <li><a href='weighing-scale.html'>Weighing Scale</a></li>
+         </ul>-->
+      </li>
+      <li><a href='testing.html'>Testing</a>
+         <!--<ul>
+            <li><a href='thermal-imaging-service.html'>Thermal Imaging Service</a></li>
+            <li><a href='electrical.html'>Electrical</a></li>
+            <li><a href='power-quality.html'>Power Quality Testing</a></li>
+            <li><a href='instruments-transmittors.html'>Instruments & Transmitters Testing</a></li>
+            <li><a href='sound-vibration.html'>Sound and Vibration</a></li>
+            <li><a href='lux-measurements.html'>LUX measurements</a></li>
+            <li><a href='ph-tds.html'>pH & TDS</a></li>
+         </ul>-->
+      </li>
+      <li><a href='engineering-consultancy.html'>Engineering Consultancy</a>
+         <!--<ul>
+            <li><a href='power-quality-analysis.html'>Power Quality Analysis</a></li>
+            <li><a href='electricity-optimization.html'>Energy Optimization Solutions</a></li>
+            <li><a href='electrical-network.html'>Electrical Network Planning & Design</a></li>
+            <li><a href='energy-management.html'>Energy Management</a></li>
+            <li><a href='renewable-energy.html'>Renewable Energy</a></li>
+         </ul>-->
+      </li>
+      <li><a href='repair-maintenance.html'>Repair & Maintenance</a>
+         <!--<ul>
+            <li><a href='instrument-repair.html'>Instrument Repair & Maintenance</a></li>
+            <li><a href='pcb.html'>PCB Boards & Electronic Circuits</a></li>
+            <li><a href='maintenance-clinic.html'>Maintenance Clinic Program</a></li>
+         </ul>-->
+      </li><!--
+      <li><a href='optical-fiber.html'>Optical Fiber Splicing</a></li>
+      <li><a href='pcb-design.html'>PCB Design & Development</a></li>-->
+      <li><a href='facilities.html'>Lab Facilities</a></li>
+   </ul>
+</li>
+
+<li><a href='training.html'>TRAININGS</a>
+   <ul>
+      <li><a href='training-list.html'>Training List</a></li>
+      <li><a href='training-plan.html'>Training Plan</a></li>
+      <!--<li><a href='completed-programs.html'>Completed Programs</a></li>
+      <li><a href='registration.html'>Registration</a></li>-->
+   </ul>
+</li>
+<li><a href='industries.html'>CLIENTS</a></li>
+<!--
+<li><a href='research-development.html'>RESEARCH & DEVELOPMENT</a>
+   <ul>
+      <li><a href='instruments-developed.html'>Instruments Developed</a></li>
+      <li><a href='industries.html'>Industries</a></li>
+      <li><a href='student-projects.html'>Student Projects</a></li>
+   </ul>
+</li>
+-->
+<li><a href='products-solutions.html'>PRODUCTS & SOLUTIONS</a>
+   <!--<ul>
+      <li><a href='daq-card.html'>DAQ Card</a></li>
+      <li><a href='temperature-logger.html'>Temperature Logger</a></li>
+   </ul>-->
+</li>
+<li><a href='contact-us.html'>CONTACT US</a></li>
+
+
+</ul>
+</nav>
+</header>
+
+
+    </div>
+
+
+  <div class="container">
+
+    <div class="contentArea">
+
+
+      <h2>Electrical Control Equipments Training</h2>
+
+      <div id="exampleAccordion" data-children=".item">
+
+      <!--<footer class="blockquote-footer text-center"><cite title="Source Title">BUILDING SKILLFUL PAKISTAN </cite></footer>-->
+
+      <div class="contentPara">
+
+
+      <div class="card card-body">
+
+        <div class="row">
+          <div class="col-md-9">
+        
+        <dt>Course Code: IC-ECE-01</dt>
+        <dt>Duration: 2 Days</dt>
+        <dt>Date & Timing: On-demand</dt>
+        <dt>Venue: NED University of Engineering & Technology</dt>
+        <dt>Investment: on-quote</dt>
+
+
+        <dt>About the Program: </dt>
+
+
+        <p>Covers the broad range of industrial motor starting and control equipment, including NEMA sizes and ratings. Includes push button control stations, limit switches, mercury switches, mechanical and magnetic plugging, foot switches, and pressure, temperature, and float switches. Covers control panel wiring and special applications.</p>
+
+        <dt>Program Content: </dt>
+
+        <ul>
+          <li>Basic Electrical Power concepts </li>
+          <li>Power Quality Analyzer</li>
+          <li>Energy Meter</li>
+          <li>Tong tester</li>
+          <li>Insulation Tester</li>
+          <li>Digital Multimeter</li>
+          <li>Earth Tester</li>
+          <li>Cable Fault locator</li>
+          <li>Phase Sequence Tester</li>
+          <li>LUX meter </li>
+          <li>PAT Testing</li>
+
+        </ul>
+
+        <dt>Who should attend:</dt>
+        <ul>
+          <li>Engineers</li>
+          <li>Technicians</li>
+          <li>Engineering Students</li>
+        </ul>
+
+
+
+
+
+      <dt><a href="mailto: smic@neduet.edu.pk">Enroll Now</a></dt>
+
+      </div>
+      <div class="col-md-3">
+        <div ><img src="images/gallery/training1.jpg" class="img-thumbnail"></div>
+        <div ><img src="images/gallery/training2.jpg" class="img-thumbnail"></div>
+        <div ><img src="images/gallery/training3.jpg" class="img-thumbnail"></div>
+        <div ><img src="images/gallery/training4.jpg" class="img-thumbnail"></div>
+      </div>
+      </div>
+
+      </div>
+
+      <br /><br /><div class="card card-body text-center">
+
+        <a class="exploreTrainings" href="training.html">Explore Other Trainings</a>
+
+      </div>
+
+    </div>
+  </div>
+    
+  </div>
+</div>
+
+
+
+
+  <div class="footerArea">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="footerHeading">Quick Links</h4>
+          <ul>
+            <li><a href="engineering-services.html">Engineering Services</a></li>
+            <li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+            <li><a href="testing-labs.html">Testing Labs</a></li>
+            <li><a href="products-and-services.html">Products & Services</a></li>
+            <li><a href="team.html">The team</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="nedLogo"></div>
+        </div>
+        <div class="col-md-4 ml-auto">
+          <h4 class="footerHeading">Contact Us</h4>
+          <div class="footerAddress">Instrumentation Centre, <br />Electronic Engineering Department, <br />NED University of Engineering & Technology</div>
+          <div class="footerContactDetails">021-99261261-8 Ext. 2265, 2514<br />smic@neduet.edu.pk</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.slim.min.js" ></script>
+
+  <script src="js/popper.min.js" ></script>
+  <script src="js/bootstrap.min.js" ></script>
+
+  <!-- Make sure the following jquery is not conflicting with one imported earlier -->
+  <script src="jquery-1.110.0.min.js"></script>
+  
+  <script> 
+  $(function(){
+    $("#navigation").load("navigation.html"); 
+  });
+  </script>
+
+    <!-- plugin script -->
+  <script src="js/jquery.mThumbnailScroller.js"></script>
+  <script src="js/sam.js"></script>
+
+  </body>
+</html>
